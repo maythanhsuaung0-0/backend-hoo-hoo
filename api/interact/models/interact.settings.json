@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interacts",
+  "info": {
+    "name": "interact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "text"
+    },
+    "posts": {
+      "collection": "posts",
+      "via": "interacts",
+      "dominant": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "interacts"
+    }
+  }
+}
